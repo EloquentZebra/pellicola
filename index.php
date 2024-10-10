@@ -257,8 +257,6 @@ if (isset($_GET['nocount'])) {
 		echo '</div>';
 		echo '<div class="center" style="color: gray; margin-bottom: 1em;">' . $subtitle . '</div>';
 		echo '<div class="center" style="margin-bottom: 1em;">';
-		// Show stats icon
-		echo '<a href="stats.php"><img src="svg/stats.svg" alt="' . L::stats . '" title="' . L::stats . '"/></a>';
 		// Show map icon
 		if ($show_map) {
 			echo '<a href="map.php" target="_blank"><img style="margin-left: .5em;" src="svg/map.svg" alt="' . L::map . '" title="' . L::map . '"/></a>';
