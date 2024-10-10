@@ -165,13 +165,13 @@ if (isset($_GET['nocount'])) {
 	{
 		echo '<div class="center">';
 		if ($current_page != 1 && !isset($_GET['file'])) {
-			echo '<a color: #e3e3e3;" href="?page=1"><img style="margin-right:1em;" src="svg/arrow-up.svg" alt="' . L::nav_first . '" title="' . L::nav_first . '"/></a> ';
+			echo '<a color: #e3e3e3;" href="?page=1"><img src="svg/arrow-up.svg" alt="' . L::nav_first . '" title="' . L::nav_first . '"/></a> ';
 		}
 		if ($current_page > 1 && !isset($_GET['file'])) {
-			echo '<a color: #e3e3e3;" href="?page=' . ($current_page - 1) . '"><img style="margin-right:1em;" src="svg/arrow-left.svg" alt="' . L::nav_prev . '" title="' . L::nav_prev . '"/></a> ';
+			echo '<a color: #e3e3e3;" href="?page=' . ($current_page - 1) . '"><img src="svg/arrow-left.svg" alt="' . L::nav_prev . '" title="' . L::nav_prev . '"/></a> ';
 		}
 		if ($current_page < $last_page && !isset($_GET['file'])) {
-			echo '<a color: #e3e3e3;" href="?page=' . ($current_page + 1) . '"><img style="margin-right:1em;" src="svg/arrow-right.svg" alt="' . L::nav_next . '" title="' . L::nav_next . '"/></a>';
+			echo '<a color: #e3e3e3;" href="?page=' . ($current_page + 1) . '"><img src="svg/arrow-right.svg" alt="' . L::nav_next . '" title="' . L::nav_next . '"/></a>';
 		}
 		if ($current_page != $last_page && !isset($_GET['file'])) {
 			echo ' <a style="color: #e3e3e3;" href="?page=' . ($last_page) . '"><img src="svg/arrow-down.svg" alt="' . L::nav_last . '" title="' . L::nav_last . '"/></a>';
@@ -431,16 +431,16 @@ if (isset($_GET['nocount'])) {
 		}
 		// Disable the Previous link if this is the FIRST photo
 		elseif (empty($files[$key - 1])) {
-			echo '<div class="center" style="margin-bottom: 1em;"><a href="' . $base_url . '/index.php?album=' . $album . '" accesskey="g"><img style="margin-right:1em;" src="svg/home.svg" alt="' . L::nav_home . '" title="' . L::nav_home . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($files[$key + 1]) . '" accesskey="n"><img style="margin-right:1em;" src="svg/arrow-right.svg"  alt="' . L::nav_next . '" title="' . L::nav_next . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($last_photo) . '" accesskey="l"><img src="svg/arrow-down.svg" alt="' . L::nav_last . '" title="' . L::nav_last . '"/></a></div>';
+			echo '<div class="center" style="margin-bottom: 1em;"><a href="' . $base_url . '/index.php?album=' . $album . '" accesskey="g"><img src="svg/home.svg" alt="' . L::nav_home . '" title="' . L::nav_home . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($files[$key + 1]) . '" accesskey="n"><img src="svg/arrow-right.svg"  alt="' . L::nav_next . '" title="' . L::nav_next . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($last_photo) . '" accesskey="l"><img src="svg/arrow-down.svg" alt="' . L::nav_last . '" title="' . L::nav_last . '"/></a></div>';
 		}
 		// Disable the Next link if this is the LAST photo
 		elseif (empty($files[$key + 1])) {
-			echo '<div class="center" style="margin-bottom: 1em;"><a href="' . $base_url . '/index.php?album=' . $album . '" accesskey="g"><img style="margin-right:1em;" src="svg/home.svg" alt="' . L::nav_home . '" title="' . L::nav_home . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($first_photo) . '" accesskey="f"><img style="margin-right:1em;" src="svg/arrow-up.svg" alt="' . L::nav_first . '" title="' . L::nav_first . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($files[$key - 1]) . '" accesskey="p"><img style="margin-right:1em;" src="svg/arrow-left.svg" alt="' . L::nav_prev . '" title="' . L::nav_prev . '"/></a></div>';
+			echo '<div class="center"><a href="' . $base_url . '/index.php?album=' . $album . '" accesskey="g"><img src="svg/home.svg" alt="' . L::nav_home . '" title="' . L::nav_home . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($first_photo) . '" accesskey="f"><img src="svg/arrow-up.svg" alt="' . L::nav_first . '" title="' . L::nav_first . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($files[$key - 1]) . '" accesskey="p"><img src="svg/arrow-left.svg" alt="' . L::nav_prev . '" title="' . L::nav_prev . '"/></a></div>';
 		}
 		// Show all navigation links
 		else {
 
-			echo '<div class="center" style="margin-bottom: 1em;"><a href="' . $base_url . '/index.php?album=' . $album . '" accesskey="g"><img style="margin-right:1em;" src="svg/home.svg" alt="' . L::nav_home . '" title="' . L::nav_home . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($first_photo) . '" accesskey="f"><img style="margin-right:1em;" src="svg/arrow-up.svg" alt="' . L::nav_first . '" title="' . L::nav_first . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($files[$key - 1]) . '" accesskey="p"><img style="margin-right:1em;" src="svg/arrow-left.svg" alt="' . L::nav_prev . '" title="' . L::nav_prev . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($files[$key + 1]) . '" accesskey="n"><img style="margin-right:1em;" src="svg/arrow-right.svg" alt="' . L::nav_next . '" title="' . L::nav_next . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($last_photo) . '" accesskey="l"><img src="svg/arrow-down.svg" alt="' . L::nav_last . '" title="' . L::nav_last . '"/></a></div>';
+			echo '<div class="center"><a href="' . $base_url . '/index.php?album=' . $album . '" accesskey="g"><img src="svg/home.svg" alt="' . L::nav_home . '" title="' . L::nav_home . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($first_photo) . '" accesskey="f"><img src="svg/arrow-up.svg" alt="' . L::nav_first . '" title="' . L::nav_first . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($files[$key - 1]) . '" accesskey="p"><img src="svg/arrow-left.svg" alt="' . L::nav_prev . '" title="' . L::nav_prev . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($files[$key + 1]) . '" accesskey="n"><img src="svg/arrow-right.svg" alt="' . L::nav_next . '" title="' . L::nav_next . '"/></a><a href="' . $base_url . '/index.php?file=' . mask_param($last_photo) . '" accesskey="l"><img src="svg/arrow-down.svg" alt="' . L::nav_last . '" title="' . L::nav_last . '"/></a></div>';
 		}
 		/* NAVIGATION LINKS ---END--- */
 
@@ -476,7 +476,7 @@ if (isset($_GET['nocount'])) {
 
 		// Concatenate $exif_info
 		if (!is_null($aperture) || !is_null($exposure) || !is_null($f_length) || !is_null($iso) || !is_null($datetime)) {
-			$exif_info = '<img style="margin-right: .5rem;" src="svg/camera.svg" alt="' . L::img_exif . '" title="' . L::img_exif . '"/>' . $aperture . $f_length . $exposure . $iso . '<img style="margin-left: .5rem; margin-right: .5rem;" src="svg/calendar.svg" alt="' . L::img_date . '" title="' . L::img_date . '"/>' .  $datetime;
+			$exif_info = '<div><img src="svg/camera.svg" alt="' . L::img_exif . '" title="' . L::img_exif . '"/>' . $aperture . $f_length . $exposure . $iso . '</div><div><img src="svg/calendar.svg" alt="' . L::img_date . '" title="' . L::img_date . '"/>' .  $datetime . '</div>';
 		} else {
 			$exif_info = NULL;
 		}
@@ -504,10 +504,10 @@ if (isset($_GET['nocount'])) {
 			$raw_download = NULL;
 		}
 		if ($download) {
-			echo '<div class="center"><img src="' . htmlentities($tim) . '" alt="' . $file_path['filename'] . '" title="' . $file_path['filename'] . '"><div class="caption">' . $comment . ' ' . $description . '</div>';
+			echo '<div class="container"><img src="' . htmlentities($tim) . '" alt="' . $file_path['filename'] . '" title="' . $file_path['filename'] . '" class="img-main"></div><div class="container">' . $comment . ' ' . $description;
 			echo '<div class="caption">' . $exif_info . '</div>';
 			echo '<div class="caption">' . $image_download . $raw_download . $image_delete . '</div>';
-			echo '<div class="caption">' . L::views . ': ' . $views_count . ' ' . L::downloads . ": " . $downloads_count . '</div>';
+			echo '<div class="caption"><div>' . L::views . ': ' . $views_count . '</div><div> ' . L::downloads . ": " . $downloads_count . '</div></div>';
 		} else {
 			echo '<div class="center"><img src="' . htmlentities($tim) . '" alt="' . $file_path['filename'] . '" title="' . $file_path['filename'] . '"><div class="caption">' . $comment . ' ' . $description . '</div>';
 			echo '<div class="caption">' . $exif_info . "<span style='margin-left: 1em;'>" . $image_delete . '</span></div>';

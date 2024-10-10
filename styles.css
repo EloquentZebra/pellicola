@@ -7,6 +7,8 @@
 
 	--border-radius: 4px;
 	--gap: 1em;
+	--width-max: 60em;
+	--width-content: 850px;
 
 	--color: #118AB2;
 	--color-bg: #ffffff;
@@ -105,13 +107,24 @@ p {
 }
 
 .caption {
-  max-width: 60em;
+  width: 95%;
+  max-width: var(--width-max);
   font-size: var(--font-size-small);
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   margin-top: var(--gap);
   line-height: 1.5em;
   text-align: center;
+
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: var(--gap);
+
+  @media (width < 800px) {
+	display: block;
+  }
 }
 
 select {
@@ -273,4 +286,18 @@ a:focus {
 
 a:visited {
 	color: var(--color-link);
+}
+
+.container {
+	width: 95%;
+	max-width: var(--width-content);
+	margin-inline: auto;
+}
+
+.img-main {
+	width: 100%;
+}
+
+.caption [src*=".svg"] {
+	margin-right: 0.25em;	
 }
