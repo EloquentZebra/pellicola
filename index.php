@@ -41,6 +41,7 @@ if (isset($_GET['nocount'])) {
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="favicon.png" />
 	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="https://files.grujo.ch/base.css" />
 	<link rel="stylesheet" href="styles.css" />
 	<link rel="alternate" type="application/rss+xml" href="rss.php" title="<?php echo $title; ?>">
 	<link rel="stylesheet" href="leaflet/leaflet.css" />
