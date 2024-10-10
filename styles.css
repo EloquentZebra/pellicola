@@ -255,7 +255,7 @@ input[type="password"] {
 	border-radius: var(--border-radius);
 }
 
-.gallery-grid:hover > .gallery-img:not(:hover) {
+.gallery-grid:hover > .gallery-frame:not(:hover) {
 	opacity: 0.5;
 }
 
