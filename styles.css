@@ -14,14 +14,40 @@
 }
 
 :root {
+	color-scheme: light dark;
+
 	--font-sans: "Inter", sans-serif;
+	--font-size: clamp(1.1rem, calc(1.1rem + .25vw), 1.75rem);
+	--font-size-small: 80%;
+
+	--border-radius: 4px;
+	--gap: 1em;
+
+	--color: #118AB2;
+	--color-bg: #ffffff;
+	--color-bg-secondary: #eeeeee;
+	--color-text: #333333;
+	--color-text-muted: #a2a3a5;
+	--color-border: #cacaca;
+	--color-link: #0076d1;
+	--color-green: #8AC926;
+	--color-red: #d43939;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  font-size: 1em;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+
+  font-size: var(--font-size);
   text-align: left;
-  margin-bottom: 2.5em;
+  margin-bottom: var(--gap);
+
+  @media (prefers-color-scheme: dark) {
+	--color-bg: #2a2a2a;
+	--color-bg-secondary: #5c5e62;
+	--color-text: #eeeeee;
+	--color-text-muted: #a2a3a5;
+  }
 }
 
 .c {
@@ -34,7 +60,7 @@ body {
 .card,
 pre {
   padding: 0.7em;
-  border: 1px solid #cacaca;
+  border: 1px solid var(--color-border);
 }
 
 hr {
@@ -146,7 +172,7 @@ input[type="password"] {
   padding: 1em;
   text-transform: uppercase;
   letter-spacing: 3px;
-  background: #fff;
+  background-color: #fff;
   border: solid;
   border-radius: var(--border-radius);
   font-weight: bold;
@@ -160,14 +186,14 @@ input[type="password"] {
 
 .btn.green {
   color: #fff;
-  background: var(--color-success);
-  border: solid var(--color-success);
+  background: var(--color-green);
+  border: solid var(--color-green);
 }
 
 .btn.red {
   color: #fff;
-  background: var(--color-error);
-  border: solid var(--color-error);
+  background: var(--color-red);
+  border: solid var(--color-red);
 }
 
 .btn:hover,
@@ -243,4 +269,8 @@ a:hover {
 .center > img {
 	max-width: 100%;
 	border-radius: var(--border-radius);
+}
+
+.gallery-grid:hover > .gallery-img:not(:hover) {
+	opacity: 0.5;
 }
