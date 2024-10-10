@@ -516,7 +516,7 @@ if (isset($_GET['nocount'])) {
 		}
 		// Show embedded map if photo is geotagged and $show_map is true
 		if ($show_map && !empty($lat) && !empty($lon)) {
-			echo '<div id="map" style="z-index: 1; margin: 1.5em auto; width: 250px; height: 250px; border-radius:5px;"></div>';
+			echo '<div id="map" class="map"></div>';
 		}
 	}
 	?>
