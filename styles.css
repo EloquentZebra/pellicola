@@ -257,6 +257,7 @@ input[type="password"] {
 
 .gallery-grid:hover > .gallery-frame:not(:hover) {
 	opacity: 0.5;
+	transition: all ease-in 0.2s;
 }
 
 input[type="search"] {
