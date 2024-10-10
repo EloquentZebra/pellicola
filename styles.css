@@ -209,18 +209,6 @@ a:hover {
   padding: 0px;
 }
 
-.footer {
-  text-decoration: none;
-  text-align: center;
-  font-size: 0.9em;
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
-  height: 1.5em;
-  width: 100%;
-  background: var(--color);
-}
-
 /* https://www.imarketinx.de/artikel/responsive-image-gallery-with-css-grid.html */
 
 /* The grid */

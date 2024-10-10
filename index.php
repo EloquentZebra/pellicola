@@ -252,7 +252,7 @@ if (isset($_GET['nocount'])) {
 	$grid = (isset($_GET['file']) ? $_GET['file'] : NULL);
 	if (!isset($grid)) {
 		echo '<div style="text-align:center; margin-bottom: 1.5em; margin-top: 5em;">';
-		echo '<a style="text-decoration:none;" href="' . $base_url . '/index.php?album="><img style="display: inline; height: 3.5em; vertical-align: middle;" src="favicon.png" alt="' . $title . '" /></a>';
+		echo '<a style="text-decoration:none;" href="' . $base_url . '/index.php?album="><img style="display: inline; height: 3.5em; vertical-align: middle;" src="favicon.png" alt="' . $title . '" /> </a>';
 		echo '<a style="text-decoration:none;" href="' . $base_url . '/index.php?album="><h1 style="display: inline; font-size: 2.3em; margin-left: 0.19em; vertical-align: middle;">' . $title . '</h1></a>';
 		echo '</div>';
 		echo '<div class="center" style="color: gray; margin-bottom: 1em;">' . $subtitle . '</div>';
