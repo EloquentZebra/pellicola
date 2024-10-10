@@ -313,7 +313,7 @@ if (isset($_GET['nocount'])) {
 					<option value="search_usercomment"><?php echo L::find_by_usercomment; ?></option>
 					<option value="search_name"><?php echo L::find_by_name; ?></option>
 				</select>
-				<input style="vertical-align: middle;" type="text" name="query">
+				<input type="search" style="vertical-align: middle;" type="text" name="query">
 				<!-- The hidden input field is used to pass the $album value (album) to the search -->
 				<input type="hidden" name="album" value="<?php echo $album; ?>">
 				<!-- The hidden input field to set $_GET['all'] to show all results without pagination -->
