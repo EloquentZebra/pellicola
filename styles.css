@@ -1,5 +1,16 @@
-html * {
-  font-family: "Inter", sans-serif !important;
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/InterVariable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/InterVariable-Italic.woff2") format("woff2");
 }
 
 body {
@@ -43,7 +54,6 @@ hr {
 
 h1 {
   color: #59a2d8ff;
-  font-family: "Inter", sans-serif;
   font-size: 2em;
   font-weight: bold;
   text-align: center;
@@ -54,7 +64,6 @@ h1 {
 }
 
 h2 {
-  font-family: "Inter", sans-serif;
   font-size: 2em;
   font-weight: bold;
   text-align: center;
@@ -65,7 +74,6 @@ h2 {
 }
 
 h3 {
-  font-family: "Inter", sans-serif;
   font-size: 1em;
   font-weight: bold;
   text-align: center;
@@ -97,8 +105,6 @@ p {
 }
 
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   height: 3em;
   padding: 0.5em 0.5em;
   margin: 0.7em 0.3em;
@@ -184,7 +190,6 @@ a:hover {
 .footer {
   text-decoration: none;
   text-align: center;
-  font-family: "Inter", sans-serif;
   font-size: 0.9em;
   position: fixed;
   left: 0px;
@@ -227,29 +232,4 @@ a:hover {
 
 .gallery-img:hover {
   opacity: 0.5;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  src: url("fonts/InterDisplay-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("fonts/InterDisplay-SemiBold.woff2");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("fonts/InterDisplay-Italic.woff2");
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("fonts/InterDisplay-SemiBoldItalic.woff2");
-  font-weight: bold;
-  font-style: italic;
 }
