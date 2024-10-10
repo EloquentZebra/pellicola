@@ -1,22 +1,7 @@
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("fonts/InterVariable.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Inter";
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("fonts/InterVariable-Italic.woff2") format("woff2");
-}
-
 :root {
 	color-scheme: light dark;
 
-	--font-sans: "Inter", sans-serif;
+	--font-sans: system-ui, ui-sans, sans-serif;
 	--font-size: clamp(1.1rem, calc(1.1rem + .25vw), 1.75rem);
 	--font-size-small: 80%;
 
@@ -266,7 +251,7 @@ input[type="password"] {
 }
 
 a:not([class]) {
-	text-decoration: underline;
+	text-decoration: none;
 	text-decoration-color: var(--color-link);
 	text-decoration-thickness: 2px;
 	text-decoration-skip-ink: auto;
@@ -280,4 +265,8 @@ a:hover {
 a:focus {
 	outline: 0.1em solid currentColor;
 	outline-offset: 0.2em;
+}
+
+a:visited {
+	color: var(--color-link);
 }
