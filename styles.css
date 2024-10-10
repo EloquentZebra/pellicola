@@ -66,9 +66,13 @@ h1 {
   font-size: 2em;
   font-weight: bold;
   text-align: center;
-  margin-top: 0.3em;
-  margin-bottom: 0.5em;
+  margin-top: 0.3em auto 0.5 auto;
   line-height: 100%;
+  max-width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 }
 
 h2 {
