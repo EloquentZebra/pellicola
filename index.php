@@ -471,7 +471,7 @@ if (isset($_GET['nocount'])) {
 			}
 		}
 		$iso = !isset($exif['EXIF']['ISOSpeedRatings']) ? NULL : ' • ' . htmlentities($exif['EXIF']['ISOSpeedRatings']);
-		$datetime = !isset($exif['EXIF']['DateTimeOriginal']) ? NULL : htmlentities((date('Y-m-d H:i', strtotime($exif['EXIF']['DateTimeOriginal']))));
+		$datetime = !isset($exif['EXIF']['DateTimeOriginal']) ? NULL : htmlentities((date('H:i d.m.Y', strtotime($exif['EXIF']['DateTimeOriginal']))));
 		$comment = (!isset($exif['COMMENT']['0']) ? NULL : htmlentities($exif['COMMENT']['0']));
 
 		// Concatenate $exif_info
