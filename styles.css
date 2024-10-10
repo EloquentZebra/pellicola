@@ -252,9 +252,6 @@ a:hover {
   transition: opacity 0.25s ease-in-out;
 }
 
-.gallery-img:hover {
-  opacity: 0.5;
-}
 
 /* custum classes */
 
