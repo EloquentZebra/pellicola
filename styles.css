@@ -259,6 +259,12 @@ input[type="password"] {
 	transition: all ease-in 0.2s;
 }
 
+.gallery-frame a {
+	display: inline-block;
+	height: auto;
+	outline-width: 0.1em;
+}
+
 a:not([class]) {
 	text-decoration: underline;
 	text-decoration-color: var(--color-link);
