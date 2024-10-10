@@ -540,19 +540,6 @@ if (isset($_GET['nocount'])) {
 			marker.addTo(map);
 		</script>
 	<?php endif; ?>
-
-	<?php // Show links
-	if ($links) {
-		$array_length = count($urls);
-		echo '<div class="footer" style="z-index: 2">';
-		for ($i = 0; $i < $array_length; $i++) {
-			echo '<span style="word-spacing:0.1em;"><a href="' . $urls[$i][0] . '">' . $urls[$i][1] . '</a> • </span>';
-		}
-		echo  $footer . '</div>';
-	} else {
-		echo '<div class="footer">' . $footer . '</div>';
-	}
-	?>
 </body>
 
 </html>
