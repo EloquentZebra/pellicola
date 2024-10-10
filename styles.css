@@ -239,3 +239,8 @@ a:hover {
   height: 350px;
   border-radius: var(--border-radius);
 }
+
+.center > img {
+	max-width: 100%;
+	border-radius: var(--border-radius);
+}
