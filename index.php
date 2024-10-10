@@ -485,7 +485,7 @@ if (isset($_GET['nocount'])) {
 		if (!empty($lat) && !empty($lon)) {
 			//Generate Geo URI
 			if ($openstreetmap) {
-				$map_url = '<a href="http://www.openstreetmap.org/index.html?mlat=' . $lat . '&mlon=' . $lon . '&zoom=18" target="_blank"><img style="margin-left: .5rem;" src="svg/pin.svg" alt="' . L::img_map . '" title="' . L::img_map . '"/></a>';
+				$map_url = '<a href="http://www.openstreetmap.org/index.html?mlat=' . $lat . '&mlon=' . $lon . '&zoom=18" target="_blank"><img style="margin-left: .5rem;" src="svg/pin.svg" alt="' . L::img_map . '" title="' . L::img_map . '"/>' . substr($lat, 0, 6) . ', ' . substr($lon, 0, 6) . '</a>';
 			} else {
 				$map_url = '<a href="geo:' . $lat . ',' . $lon . '"><img style="margin-left: .5rem;" src="svg/pin.svg" alt="' . L::img_map . '" title="' . L::img_map . '"/></a>';
 			}
